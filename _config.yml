@@ -1,0 +1,19 @@
+title: Programação 1
+email: jacson.silva@ufes.br
+description: >-
+  Esta página foi desenvolvida para dar apoio aos estudantes de Programação 1.
+  Serão disponibilizados aqui os conteúdos da disciplina e informações úteis
+  para que vocês possam acompanhar bem a disciplna.
+  Sintam-se livres para me contactar e também para marcar um horário e tirar
+  dúvidas em minha sala. Para isso, me enviem um e-mail, por favor.
+  Minha meta é o seu aprendizado.
+  Vamos nos divertir? Ok, então, bora programar.
+domain: "www.jeiks.net"
+baseurl: "/prog1"
+url: "http://www.jeiks.net/prog1"
+twitter_username: jeiks
+github_username:  jeiks
+
+theme: minima
+plugins:
+  - jekyll-feed
