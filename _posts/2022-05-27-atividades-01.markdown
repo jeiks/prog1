@@ -1,0 +1,61 @@
+---
+layout: post
+title:  "Atividades 01"
+date:   2022-05-27 18:00:00 -0300
+categories: jekyll update
+---
+
+{% include header_atividades.html%}
+
+<h3>Atividade</h3>
+<ol>
+    <li>Crie um arquivo com o nome "atividade-2022-05-27.c"</li>
+    <li>No início deste arquivo, crie um comentário, informando:
+        <ul>
+            <li>Sua matrícula,</li>
+            <li>o algoritmo que você criou para esse programa,</li>
+            <li>a escolha de cada tipo de variável,</li>
+            <li>explicação do fluxo de execução do programa.</li>
+        </ul>
+    </li>
+    <li>Agora, crie um programa (algoritmo e código em C) capaz de lhe ajudar na seguinte tarefa:<br>
+        <div style='font-family: Arial, Helvetica, sans-serif;text-align: justify;text-justify: inter-word;  font-style: italic;'>
+        Vovô Inácio tem uma pastelaria excelente e recebe muito dinheiro. Ele também faz muitos pagamentos pra manter a qualidade de sua pastelaria sempre a melhor da cidade.<br>
+        Como ele estava com problemas ao gerenciar o dinheiro, principalmente pela falta de tempo, ele te chamou para ajudar no caixa da empresa.<br>
+        Assim, você deve fazer o controle do dinheiro que entra e sai da conta bancária dele.<br>
+        A única coisa que ele quer fazer é te informar o dinheiro recebido e os pagamentos efetuados na semana (funciona de segunda à sexta).
+        Exemplo:
+        <ul>
+            <li>segunda: entrada de R$ 600,00;</li>
+            <li>terça: entrada de R$ 200,00 e saída de R$ 500,00;</li>
+            <li>quarta: entrada de R$ 100,00 e saída de R$ 600,00;</li>
+            <li>quinta: entrada de R$ 200,00.</li>
+            <li>sexta: entrada de R$ 700,00 e saída de R$ 1000,00.</li>
+        </ul>
+        Como o saldo do vovô é rotativo, ele te pediu para lhe dar dois avisos:
+        <ol>
+            <li>quando estiver com saldo maior que R$ 2000,00:
+                <ul>
+                    <li>Valor total de dinheiro recebido.</li>
+                    <li>Valor total de pagamentos realizados.</li>
+                    <li>Qual é o saldo positivo atual.</li>
+                </ul>
+            </li>
+            <li>quando estiver com saldo menor que R$ 500,00:
+                <ul>
+                    <li>Valor total de dinheiro recebido.</li>
+                    <li>Valor total de pagamentos realizados.</li>
+                    <li>Qual é o saldo negativo atual.</li>
+                </ul>
+            </li>
+        </ol>
+        </div>
+    </li>
+    <li>Explicitamente, a ajuda do programa deve ser:
+        <ul>
+            <li>Receber os valores de entrada e saída de valores da semana.</li>
+            <li>Calcular o caixa do dia.</li>
+            <li>Emitir os avisos no dia que forem necessários</li>
+        </ul>
+    </li>
+</ol>
