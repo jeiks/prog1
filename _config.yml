@@ -14,7 +14,7 @@ url: "http://www.jeiks.net/prog1"
 twitter_username: jeiks
 github_username:  jeiks
 
-theme: minima
+theme: jekyll-theme-slate
 plugins:
   - jekyll-feed
 
