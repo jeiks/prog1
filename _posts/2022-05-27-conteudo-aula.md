@@ -1,6 +1,6 @@
 ---
 title: Conteúdo da Aula - 27/05
-layout: default
+layout: post
 ---
 
 **Tópicos abordados:**
