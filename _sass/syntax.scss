@@ -215,9 +215,8 @@
 }
 .highlight pre, .highlight code {
   background-color: #fff;
-  border: 0px;
   overflow-x: auto;
-  padding: 1px;
+  padding: 0px;
 }
 .highlight .gl {
   text-align: center;
@@ -225,6 +224,8 @@
 }
 .highlight table {
     margin-bottom: 2px;
-    border: 1px solid #e8e8e8;
     border-collapse: unset;
+}
+.highlight .rouge-table {
+    border: 0;
 }
