@@ -41,7 +41,7 @@ categories: jekyll update
                     <li>Qual é o saldo positivo atual.</li>
                 </ul>
             </li>
-            <li>quando estiver com saldo menor que - R$ 500,00 (ou seja, saldo negativo maior que R$ 500,00):
+            <li>quando estiver com saldo menor que R$ -500,00 (ou seja, saldo negativo maior que R$ 500,00):
                 <ul>
                     <li>Valor total de dinheiro recebido.</li>
                     <li>Valor total de pagamentos realizados.</li>
