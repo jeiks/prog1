@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Atividades 02"
+date:   2022-06-03 18:00:00 -0300
+---
+
+### As atividades abaixo devem ser feitas até o dia 08/06/22:
+
+1. Estudar as publicações desse site sobre o [printf]({{site.baseurl}}{% post_url 2022-05-27-conteudo-aula-printf %}) e o [scanf]({{site.baseurl}}{% post_url 2022-05-27-conteudo-aula-scanf %}), fazendo os exercícios pedidos lá.
+2. Fazer a Atividade 01 (do Vovô Inácio) (pode estudar o [exemplo]({{site.baseurl}}{% link files/vovo_inacio.zip %}) que eu deixei disponível para vocês, mas não copiem, usem somente para estudo).
+3. Fazer os últimos [exercícios]({{site.baseurl}}{% link files/exercicios-2022-06-03.zip %})
+</ol>
