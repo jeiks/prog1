@@ -43,6 +43,9 @@ Siga uma das alternativas abaixo:
    <br>Nós escolhemos *aula.e* nesse exemplo, mas para o GNU/Linux, o *.e* não faz diferença.
    <br>Porém, se for no Windows, o arquivo executável deverá terminar com *.exe*:
    <br>```gcc aula.c -o aula.exe```
+   
+   > Se ainda não tiver instalado o GCC, execute o seguinte comando:
+   > <br>```sudo apt install gcc```
  * Agora, para executar o programa, você deve informar qual é sua localização.<br>
    Como aprendemos em sala, toda vez que usamos o ponto ```.```, estamos indicando o diretório que estamos atualmente.<br>
    E vimos que a barra ```/``` separa o nome do diretório do nome do arquivo. Por isso, vamos executar nosso programa assim:<br>
