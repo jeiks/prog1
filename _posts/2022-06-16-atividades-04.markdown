@@ -1,0 +1,109 @@
+---
+layout: post
+title:  Atividades 04
+date:   2022-06-10 13:22:00 -0300
+---
+
+
+## *Problema 1:* Zero para cancelar
+
+Seu chefe está ao telefone, com muita pressa. Ele quer que você some uma sequência de números (de suas vendas) que ele vai falar rapidamente para você ao telefone.
+<br>Ao final, ele deseja saber o valor total das vendas que ele já fez.
+<br>Assim, seu chefe vai falar uma sequência de números e você deve ir somando eles.
+<br>Foi combinado que você deve parar de somar e fornecer o resultado quando ele disser o número "zero".
+
+
+**Atividade:**
+1. Crie um arquivo com o nome "atividade-zero_cancelar-01.c"
+2. Faça um programa para lhe ajudar a resolver esse problema.
+3. E no início deste arquivo, crie um comentário com:
+ * o algoritmo que você criou antes de implementar esse programa,
+ * a escolha de cada tipo de variável,
+ * a explicação do fluxo de execução do programa.
+4. Agora, melhore seu programa. Para isso:
+   1. crie um arquivo com o nome "atividade-zero_cancelar-02.c"
+   2. copie o conteúdo do arquivo anterior para esse arquivo.
+   3. Considere o seguinte complemento da história:
+    *<br/>Infelizmente, de vez em quando seu chefe fala números errados para você ao telefone.
+    <br/>Mas seu chefe sempre percebe que falou um número errado logo após seu erro.
+    <br/>Assim, vocês combinaram que, quando ele disser "menos um" (-1), você deve ignorar o último número corrente.*
+   4. Então, ajuste o programa feito anteriormente para resolver esse problema.
+
+---
+---
+
+## *Problema 2:* Sorte grande!
+
+Em uma escola moderna, eles resolveram fazer um jogo da sorte tecnológico.
+<br>Para isso, eles querem sua ajuda.
+<br>Informações para fazer o programa:
+* são 5 prêmios;
+* os números da sorte para cada prêmio são: 7, 43, 56, 87, 92;
+* para cada um dos números da sorte, o professor informará:
+  * o prêmio referente e 
+  * a senha para retirá-lo.
+* após isso, cada aluno poderá digitar um número para tentar acertar um dos números da sorte;
+* caso o aluno acerte um dos números, ele deverá ser informado de qual prêmio ganhou e a senha para pegar o prêmio.
+
+Notas:
+* o programa não pode dar o mesmo prêmio para mais de um aluno;
+* o programa deve encerrar quando não tiver mais nenhum prêmio disponível.
+
+**Atividade:**
+1. Crie um arquivo com o nome "atividade-sorte_grande.c"
+2. Faça um programa para lhe ajudar a resolver esse problema.
+3. E no início deste arquivo, crie um comentário com:
+ * o algoritmo que você criou antes de implementar esse programa,
+ * a escolha de cada tipo de variável,
+ * a explicação do fluxo de execução do programa.
+
+---
+---
+
+## *Problema 3:* Torneio de tênis
+
+A prefeitura contratou um novo professor para ensinar as crianças do bairro a jogar tênis na quadra de tênis do parque municipal. O professor convidou todas as crianças do bairro interessadas em aprender a jogar tênis. Ao final do primeiro mês de aulas e treinamentos foi organizado um torneio em que cada participante disputou exatamente seis jogos. O professor vai usar o desempenho no torneio para separar as crianças em três grupos, de forma a ter grupos de treino em que os participantes tenham habilidades mais ou menos iguais, usando o seguinte critério:
+* participantes que venceram 5 ou 6 jogos serão colocados no Grupo 1;
+* participantes que venceram 3 ou 4 jogos serão colocados no Grupo 2;
+* participantes que venceram 1 ou 2 jogos serão colocados no Grupo 3;
+* participantes que não venceram nenhum jogo não serão convidados a continuar com os treinamentos.
+
+Dada uma lista com o resultado dos jogos de um participante, escreva um programa para determinar em qual grupo ele será colocado.
+
+### Entrada
+A entrada do programa consiste de seis linhas, cada linha indicando o resultado de um jogo do participante. Cada linha contém um único número: 1 se o participante venceu o jogo, ou 0 se perdeu o jogo. Não há empates nos jogos.
+
+### Saída
+Seu programa deve informar qual é o grupo em que o participante será colocado ou se ele deverá continuar treinando.
+
+*Exemplo 1:*
+> Entrada (valor que o usuário vai digitar):
+ <br> 1
+ <br> 1
+ <br> 0
+ <br> 0
+ <br> 0
+ <br> 1
+> <br><br>
+> Saída do seu programa:
+  <br> Ele deve ser colocado no grupo 2
+
+*Exemplo 2:*
+> Entrada (valor que o usuário vai digitar):
+ <br> 0
+ <br> 0
+ <br> 0
+ <br> 0
+ <br> 0
+ <br> 0
+> <br><br>
+> Saída do seu programa:
+ <br> Ele deve continuar treinando
+
+**Atividade:**
+1. Crie um arquivo com o nome "atividade-torneio_tenis.c"
+2. Faça um programa para resolver esse problema.
+3. E no início deste arquivo, crie um comentário com:
+ * o algoritmo que você criou antes de implementar esse programa,
+ * a escolha de cada tipo de variável,
+ * a explicação do fluxo de execução do programa.
