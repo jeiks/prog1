@@ -8,15 +8,15 @@
 
 - data: 02/06/22
   aula: 11
-  conteudo: Algoritmos, programas com condicionais e laços de repetição
+  conteudo: Algoritmos, condicionais e switch
 
 - data: 03/06/22
   aula: 12
-  conteudo: Algoritmos, laços de repetição
+  conteudo: Algoritmos, condicionais s switch
 
 - data: 09/06/22
   aula: 13
-  conteudo: Vetores e criação de novos tipos de dados
+  conteudo: Laços de repetição
 
 - data: 10/06/22
   aula: –
@@ -32,7 +32,7 @@
 
 - data: 23/06/22
   aula: 14
-  conteudo: Manipulação de vetores
+  conteudo: Laços de repetição
 
 - data: 24/06/22
   aula: 15
@@ -44,7 +44,7 @@
 
 - data: 01/07/22
   aula: 17
-  conteudo: Matrizes
+  conteudo: Vetores e criação de novos tipos de dados
 
 - data: 07/07/22
   aula: 18
@@ -52,15 +52,15 @@
 
 - data: 08/07/22
   aula: 19
-  conteudo: Ponteiros e alocação dinâmica de memória
+  conteudo: Vetores, Matrizes
 
 - data: 14/07/22
   aula: 20
-  conteudo: Vetores, matrizes, ponteiros e alocação dinâmica de memória
+  conteudo: Vetores, Matrizes
 
 - data: 15/07/22
   aula: 21
-  conteudo: Funções, escopo de variáveis, parâmetros
+  conteudo: Ponteiros e alocação dinâmica de memória
 
 - data: 21/07/22
   aula: 22
@@ -68,7 +68,7 @@
 
 - data: 22/07/22
   aula: 23
-  conteudo: Recursividade
+  conteudo: Funções, escopo de variáveis, parâmetros
 
 - data: 28/07/22
   aula: 24
@@ -76,7 +76,7 @@
 
 - data: 29/07/22
   aula: 25
-  conteudo: Armazenamento de dados em arquivos
+  conteudo: Recursividade
 
 - data: 04/08/22
   aula: 26
@@ -84,11 +84,11 @@
 
 - data: 05/08/22
   aula: 27
-  conteudo: Atividades com todo conteúdo ministrado
+  conteudo: Armazenamento de dados em arquivos
 
 - data: 11/08/22
   aula: 28
-  conteudo: Atividades com todo conteúdo ministrado
+  conteudo: Revisão para avaliação
 
 - data: 12/08/22
   aula: 29
