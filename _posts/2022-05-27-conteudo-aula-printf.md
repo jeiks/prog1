@@ -287,3 +287,17 @@ Nota: 7.00
   {%endhighlight%}
 > Você pode ver que o ```#define``` NOME e NOTA não existem mais no código que será compilado.
 <hr/>
+
+<br>
+Dica:<br>
+Por padrão, o ```scanf``` só faz a leitura de strings até o espaço em branco.<br>
+No exemplo abaixo, por exemplo:<br>
+```char nome[20];```<br>
+```scanf("%s", nome);```<br>
+Se a pessoa digitar "professor jacson", a variável ```nome``` terá somente o valor "professor" e "jacson" será ignorado.<br>
+Para ler o valor todo, ou seja, até o final da linha (```ENTER``` ou ```\n```), deve-se fazer assim:<br>
+```char nome[20];```<br>
+```scanf("%[^\n]%*c", nome);```<br>
+Assim, você estará pedindo ele para ler caracteres até encontrar um ```\n```.<br>
+Lembrando: a melhor forma de testar se você fez certo é efetuando a leitura da variável e,
+depois, a escrita do valor lido para a variável na tela.
