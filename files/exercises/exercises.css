@@ -1,0 +1,130 @@
+.title { grid-area: title; }
+.code { grid-area: code; }
+.options {grid-area: options; }
+
+.title {
+    font-size: 1.2rem;
+}
+
+.code, .options {
+    font-family: 'Source Code Pro';
+    line-height: 1.5rem;
+    background-color: #f3f0f0;
+    padding: 10px;
+}
+
+.problem {
+    display: grid;
+    grid-template-areas: 'title' 'code' 'options';
+    width: 800px;
+    margin: 0 auto;
+}
+
+.problem > #options {
+    display: flex;
+    justify-content: left;
+    padding: 20px;
+}
+
+.with_arrow:nth-child(1) {
+    margin-right: 20px;
+}
+
+button {
+    -webkit-text-size-adjust: 100%;
+    -webkit-appearance: button;
+    display: inline-block;
+
+    box-sizing: inherit;
+    font: inherit;
+    text-transform: none;
+    text-decoration: none;
+    text-align: center;
+
+    margin: 0;
+    border: none;
+    vertical-align: middle;
+    overflow: hidden;
+    cursor: pointer;
+    white-space: nowrap;
+    user-select: none;
+    /*margin-bottom: 5px!important;*/
+    color: #FFFFFF;
+    background-color: #04AA6D;
+    border-radius: 5px;
+    font-size: 17px;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 7px 12px;
+
+    transition: all 0.5s;
+}
+
+.with_arrow span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.with_arrow span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.with_arrow:hover span {
+    padding-right: 25px;
+}
+  
+.with_arrow:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+input[type=text] {
+    font-family: 'Source Code Pro';
+    font-size: 1rem;
+    border: 1px solid #dbdbdb;
+    margin: 2px 0;
+    box-sizing: border-box;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=text]:focus {
+    border: 1px solid rgb(204, 174, 174);
+}
+
+.correct_answer input {
+    color: darkgreen;
+    border: 0px;
+}
+
+.correct_answer:after {
+    content: '\2713';
+    position: relative;
+    top: -10px;
+    right: 8px;
+    color:darkgreen;
+}
+
+.correct_answer_final input {
+    color: darkgreen;
+    border: 0px;
+}
+
+.wrong_answer input {
+    color: crimson;
+}
+
+.wrong_answer:after {
+    content: '\2717';
+    position: relative;
+    top: -10px;
+    right: 8px;
+    color: crimson;
+}
