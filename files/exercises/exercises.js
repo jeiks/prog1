@@ -34,7 +34,7 @@ $(document).ready(function(){
         var idx = $(element).attr('id').split('_')[1],
             current_value = $(element).val(),
             aux_element = $(where).children('.code').find("input[id^='answer_"+idx+"']");
-        console.log(aux_element.val() + " -- " + current_value);
+        //console.log(aux_element.val() + " -- " + current_value);
         $(element).val(aux_element.val());
         aux_element.val(current_value);
     }
@@ -144,6 +144,7 @@ $(document).ready(function(){
                  'printf("%d\n", ##INPUT:meusNumeros####INPUT:[i]##);#n'+
                  '}'
     );
+    /*
     add_exercise('.problem5',
                  '5. Faça corretamente a leitura do vetor <i>notas</i>',
                  'int main()#n' +
@@ -167,6 +168,6 @@ $(document).ready(function(){
                  '#t}#n' +
                  '}#n'
     );
-
+*/
 //fim do jquery
 });
