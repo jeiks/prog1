@@ -101,7 +101,6 @@ input[type=text]:focus {
 
 .correct_answer input {
     color: darkgreen;
-    /*margin: 2px 0px;*/
 }
 
 .correct_answer:after {
@@ -112,6 +111,7 @@ input[type=text]:focus {
 .correct_answer_final input {
     color: darkgreen;
     border: 0px;
+    margin: 2px 0px;
 }
 
 .wrong_answer input {
