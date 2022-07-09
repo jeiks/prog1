@@ -129,3 +129,49 @@ input[type=text]:focus {
     right: 8px;
     margin-right: -11px;
 }
+#toggle:before {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    content: "\21bb";
+    cursor: pointer;
+    background-color: #04aa6d42;
+    border-radius: 30%;
+    line-height: 15px;
+    margin-top: 10px;
+    padding-top: 4px;
+}
+#print:before {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    content: "\2399";
+    cursor: pointer;
+    background-color: #04aa6d42;
+    border-radius: 30%;
+    line-height: 15px;
+    margin-top: 10px;
+    padding-top: 4px;
+}
+#genPDF {
+    margin: 0 auto;
+    width: 800px;
+    height: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+@media only print {
+    .options {
+        visibility: hidden;
+        height: 0px;
+    }
+    .problem {
+        page-break-inside: avoid;
+    }
+    #genPDF {
+        visibility: hidden;
+    }
+}

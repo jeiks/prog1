@@ -33,7 +33,6 @@ function toggle_value(element, where)
     var idx = $(element).attr('id').split('_')[1],
         current_value = $(element).val(),
         aux_element = $(where).children('.code').find("input[id='answer_"+idx+"']");
-    console.log(aux_element.val() + " -- " + current_value);
     $(element).val(aux_element.val());
     aux_element.val(current_value);
 }
@@ -56,14 +55,12 @@ function check_answer(element, where)
     var idx = $(element).attr('id').split('_')[1],
         answer = $(element).val(),
         correct_answer = $(where).children('.code').find("input[id^='answer_"+idx+"']").val();
-    console.log(answer, correct_answer);
     return answer === correct_answer;
 }
 function submit_answer(where)
 {
     var wrong=0, inputs = $(where).children('.code').find("input[id^='input_']");
     inputs.each(function(_, element) {
-        console.log(element);
         $(element).prop( "disabled", true );
         if (check_answer(element, where)){
             $(element).parent().addClass('correct_answer');
@@ -117,4 +114,19 @@ function add_exercise(parent, title, elements)
     $(parent+' .title').append($('<p>').html(title).css({'font-weight': 'bold'}));
 
     elements.split('##').forEach(function(e,i,a) { add_element(parent+' .code', e, i); });
+}
+function genPDF() {
+    var element = document.body;
+    var opt = {
+    margin:       1,
+    filename:     'myfile.pdf',
+    image:        { type: 'png', quality: 0.98 },
+    html2canvas:  { scale: 1 },
+    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' },
+    pagebreak:    { avoid: ['.code', '.title', 'p', 'div'] }
+    };
+    html2pdf().set(opt).from(element).save();
+}
+function toggle() {
+    $('.options').toggle();
 }
