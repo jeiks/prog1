@@ -101,15 +101,12 @@ input[type=text]:focus {
 
 .correct_answer input {
     color: darkgreen;
-    border: 0px;
+    /*margin: 2px 0px;*/
 }
 
 .correct_answer:after {
     content: '\2713';
-    position: relative;
-    top: -10px;
-    right: 8px;
-    color:darkgreen;
+    color: darkgreen;
 }
 
 .correct_answer_final input {
@@ -123,8 +120,12 @@ input[type=text]:focus {
 
 .wrong_answer:after {
     content: '\2717';
+    color: crimson;
+}
+
+.correct_answer:after, .wrong_answer:after {
     position: relative;
     top: -10px;
     right: 8px;
-    color: crimson;
+    margin-right: -11px;
 }
