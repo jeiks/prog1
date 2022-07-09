@@ -8,10 +8,10 @@ layout: post
 ### [Atividades avaliativas]({{site.baseurl}}{% link files/Atividades_avaliativas-Vetores.pdf %}) [(Programas)]({{site.baseurl}}{% link files/Atividades_avaliativas-Vetores.html %})
 
 #### Instruções para entrega:
-* Enviar as respostas para meu e-mail:
-  * Destinatário: jacson.silva@ufes.br
-  * Assunto: Atividades Avaliativas Vetores
-  * Corpo do e-mail: informe seu nome completo e seu número de matrícula.
+* As respostas deverão estar em um arquivo .zip, contendo:
+  * Um documento em "DOC" ou "ODT"
+  * O código fonte de todas as implementações que fez para resolver os exercícios.
+* Entregar no Google Classroom
 * Data de entrega: 14/07/2022
 
 Obs.: fiz esses exercícios para que vocês possam aprender se exercitando.
