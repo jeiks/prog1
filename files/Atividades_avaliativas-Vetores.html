@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="Generator" content="Kate, the KDE Advanced Text Editor" />
+<title>Atividades Avaliativas - Vetores</title>
+</head>
+<!-- Highlighting: "C" -->
+<body>
+<pre style='color:#1f1c1b;background-color:#ffffff;'>
+<span style='color:#898887;'>/* programa_1 ················································*/</span>
+<span style='color:#006e28;'>#include </span><span style='color:#ff5500;'>&lt;stdio.h&gt;</span>
+<span style='color:#0057ae;'>int</span> main()
+{
+    <span style='color:#0057ae;'>int</span> i;
+    <b>for</b> (i=<span style='color:#b08000;'>0</span> ; i&lt;<span style='color:#b08000;'>5</span> ; i++)
+        printf(<span style='color:#bf0303;'>&quot;Valor de i: %d</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, i);
+    
+    printf(<span style='color:#bf0303;'>&quot;Agora, a variável i possui o valor: %d</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, i);
+}
+
+<hr>
+<span style='color:#898887;'>/* programa_2 ················································*/</span>
+<span style='color:#006e28;'>#include </span><span style='color:#ff5500;'>&lt;stdio.h&gt;</span>
+<span style='color:#0057ae;'>int</span> main()
+{
+    <span style='color:#0057ae;'>const</span> <span style='color:#0057ae;'>int</span> i;
+    <b>for</b> (i=<span style='color:#b08000;'>0</span> ; i&lt;<span style='color:#b08000;'>5</span> ; i++)
+        printf(<span style='color:#bf0303;'>&quot;Valor de i: %d</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, i);
+}
+
+<hr>
+<span style='color:#898887;'>/* programa_3 ················································*/</span>
+<span style='color:#006e28;'>#include </span><span style='color:#ff5500;'>&lt;stdio.h&gt;</span>
+<span style='color:#0057ae;'>int</span> main()
+{
+    <span style='color:#0057ae;'>int</span> num;
+    <b>do</b> {
+        printf(<span style='color:#bf0303;'>&quot;Digite um número: &quot;</span>);
+        scanf(<span style='color:#bf0303;'>&quot;%d&quot;</span>, &amp;num);
+    } <b>while</b> (num &gt;= <span style='color:#b08000;'>2</span> &amp;&amp; num &lt;= <span style='color:#b08000;'>80</span>);
+    printf(<span style='color:#bf0303;'>&quot;Saindo...</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>);
+}
+
+<hr>
+<span style='color:#898887;'>/* programa_4 ················································*/</span>
+<span style='color:#006e28;'>#include </span><span style='color:#ff5500;'>&lt;stdio.h&gt;</span>
+<span style='color:#0057ae;'>int</span> main()
+{
+    <span style='color:#0057ae;'>const</span> <span style='color:#0057ae;'>int</span> constante = <span style='color:#b08000;'>1</span>;
+    <span style='color:#0057ae;'>int</span> num, num2;
+    <span style='color:#0057ae;'>char</span> nome[<span style='color:#b08000;'>20</span>];
+
+    printf(<span style='color:#bf0303;'>&quot;Digite seu nome: &quot;</span>);
+    scanf(<span style='color:#bf0303;'>&quot;%s&quot;</span>, nome);
+
+    <b>do</b> {
+        printf(<span style='color:#bf0303;'>&quot;Digite um número: &quot;</span>);
+        scanf(<span style='color:#bf0303;'>&quot;%d&quot;</span>, &amp;num);
+    } <b>while</b> (!(num &lt; <span style='color:#b08000;'>2</span> || num &gt; <span style='color:#b08000;'>80</span>));
+    printf(<span style='color:#bf0303;'>&quot;Nome digitado: %s</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, nome);
+    printf(<span style='color:#bf0303;'>&quot;Numero digitado somado com 10: %d</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, num+<span style='color:#b08000;'>10</span> );
+    printf(<span style='color:#bf0303;'>&quot;Numero digitado igual a constante %d: %d</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, constante, num == constante);
+    printf(<span style='color:#bf0303;'>&quot;(1 significa verdadeiro e 0 significa falso)</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>);
+}
+
+<hr>
+<span style='color:#898887;'>/* programa_5 ················································*/</span>
+<span style='color:#006e28;'>#include </span><span style='color:#ff5500;'>&lt;stdio.h&gt;</span>
+<span style='color:#0057ae;'>int</span> main()
+{
+    <span style='color:#0057ae;'>int</span> valor1=<span style='color:#b08000;'>34</span>, i, cont=<span style='color:#b08000;'>0</span>, soma=<span style='color:#b08000;'>0</span>;
+
+    <b>for</b> (i=<span style='color:#b08000;'>0</span> ; i&lt;<span style='color:#b08000;'>5</span> ; i++)
+    {
+        printf(<span style='color:#bf0303;'>&quot;valor1: %d</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, valor1);
+        printf(<span style='color:#bf0303;'>&quot;cont: %d</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, cont);
+        printf(<span style='color:#bf0303;'>&quot;soma: %d</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, soma);
+        printf(<span style='color:#bf0303;'>&quot;----------------</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>);
+        valor1 = valor1 + i;
+        cont++;
+        soma = soma + i;
+    }
+    printf(<span style='color:#bf0303;'>&quot;</span><span style='color:#3daee9;'>\n\n</span><span style='color:#bf0303;'>&quot;</span>);
+    printf(<span style='color:#bf0303;'>&quot;Valor de valor1: %d</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, valor1);
+    printf(<span style='color:#bf0303;'>&quot;Valor de cont: %d</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, cont);
+    printf(<span style='color:#bf0303;'>&quot;Valor de soma: %d</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, soma);
+}
+
+<hr>
+<span style='color:#898887;'>/* programa_6 ················································*/</span>
+<span style='color:#006e28;'>#include </span><span style='color:#ff5500;'>&lt;stdio.h&gt;</span>
+<span style='color:#0057ae;'>int</span> main()
+{
+    <span style='color:#0057ae;'>int</span> num;
+    num = <span style='color:#b08000;'>0</span>;
+    <b>while</b> (num &lt; <span style='color:#b08000;'>10</span>) {
+        printf(<span style='color:#bf0303;'>&quot;valor do numero: %d</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, num);
+    }
+    printf(<span style='color:#bf0303;'>&quot;Saindo...</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>);
+}
+
+<hr>
+<span style='color:#898887;'>/* programa_7 ················································*/</span>
+<span style='color:#006e28;'>#include </span><span style='color:#ff5500;'>&lt;stdio.h&gt;</span>
+<span style='color:#0057ae;'>int</span> main()
+{
+    <span style='color:#0057ae;'>char</span> nome[<span style='color:#b08000;'>20</span>];
+    printf(<span style='color:#bf0303;'>&quot;Digite seu nome: &quot;</span>);
+    scanf(<span style='color:#bf0303;'>&quot;%s&quot;</span>, nome);
+    <b>switch</b>(nome[<span style='color:#b08000;'>0</span>]) {
+        <b>case</b> <span style='color:#924c9d;'>'j'</span>:
+        <b>case</b> <span style='color:#924c9d;'>'J'</span>:
+            printf(<span style='color:#bf0303;'>&quot;Seu nome comeca com uma letra bonita!</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>);
+            <b>break</b>;
+        <b>default</b>:
+            printf(<span style='color:#bf0303;'>&quot;Seu nome nãoo comeca com uma letra bonita! =P</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>);
+    }
+}
+
+<hr>
+<span style='color:#898887;'>/* programa_8 ················································*/</span>
+<span style='color:#006e28;'>#include </span><span style='color:#ff5500;'>&lt;stdio.h&gt;</span>
+<span style='color:#006e28;'>#define MAX_ITENS 10</span>
+
+<span style='color:#0057ae;'>int</span> main()
+{
+    <span style='color:#0057ae;'>float</span> valores[MAX_ITENS];
+    <span style='color:#0057ae;'>float</span> valorTotal;
+    <span style='color:#0057ae;'>int</span> maisCaro, i;
+
+    printf(<span style='color:#bf0303;'>&quot;programa_compras</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>);
+    <b>for</b> (i=<span style='color:#b08000;'>0</span>;i&lt;MAX_ITENS;i++)
+    {
+        printf(<span style='color:#bf0303;'>&quot;Digite o valor do item %d: &quot;</span>, i);
+        scanf(<span style='color:#bf0303;'>&quot;%f&quot;</span>, &amp;valores[i]);
+    }
+
+    <span style='color:#898887;'>// agora vamos analisar os itens de nossa compra</span>
+    valorTotal = <span style='color:#b08000;'>0</span>;
+    <b>for</b> (i=<span style='color:#b08000;'>0</span>;i&lt;MAX_ITENS;i++)
+    {
+        printf(<span style='color:#bf0303;'>&quot;Estou somando %.2f com %.2f</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, valorTotal, valores[i]);
+        valorTotal = valorTotal + valores[i];
+    }
+
+    maisCaro = <span style='color:#b08000;'>0</span>;
+    <b>for</b> (i=<span style='color:#b08000;'>1</span>;i&lt;MAX_ITENS;i++)
+    {
+        <b>if</b> (valores[i] &gt; valores[maisCaro])
+        {
+            maisCaro = i;
+        }
+    }
+
+    <span style='color:#898887;'>// escrevendo as informações obtidas na tela</span>
+    printf(<span style='color:#bf0303;'>&quot;</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>Informacoes:</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>);
+    printf(<span style='color:#bf0303;'>&quot;O valor do primeiro produto comprado foi: R$ %.2f</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, valores[<span style='color:#b08000;'>0</span>]);
+    printf(<span style='color:#bf0303;'>&quot;O valor do último produto comprado foi: R$ %.2f</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, valores[MAX_ITENS-<span style='color:#b08000;'>1</span>]);
+    printf(<span style='color:#bf0303;'>&quot;A soma dos valores foi: R$ %.2f</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, valorTotal);
+    printf(<span style='color:#bf0303;'>&quot;O item mais caro está na posição %d do vetor.</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, maisCaro);
+    printf(<span style='color:#bf0303;'>&quot;Isso significa que foi o %dº item comprado.</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, maisCaro+<span style='color:#b08000;'>1</span>);
+    printf(<span style='color:#bf0303;'>&quot;O valor do item mais caro foi de: R$ %.2f</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, valores[maisCaro]);
+}
+
+<hr>
+<span style='color:#898887;'>/* programa_9 ················································*/</span>
+<span style='color:#006e28;'>#include </span><span style='color:#ff5500;'>&lt;stdio.h&gt;</span>
+<span style='color:#006e28;'>#define MAX_ITENS 10</span>
+
+<span style='color:#0057ae;'>int</span> main()
+{
+    <span style='color:#0057ae;'>float</span> valores[MAX_ITENS];
+    <span style='color:#0057ae;'>char</span> nomes[MAX_ITENS][<span style='color:#b08000;'>20</span>];
+    <span style='color:#0057ae;'>float</span> valorTotal;
+    <span style='color:#0057ae;'>int</span> maisCaro, i;
+
+    printf(<span style='color:#bf0303;'>&quot;programa_de Compras</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>);
+    <b>for</b> (i=<span style='color:#b08000;'>0</span>;i&lt;MAX_ITENS;i++)
+    {
+        printf(<span style='color:#bf0303;'>&quot;Digite o nome do produto %d: &quot;</span>, i); <span style='color:#898887;'>//modificado aqui</span>
+        scanf(<span style='color:#bf0303;'>&quot;%s&quot;</span>, nomes[i]);                      <span style='color:#898887;'>//modificado aquid</span>
+        printf(<span style='color:#bf0303;'>&quot;Digite o valor do item %d: &quot;</span>, i);
+        scanf(<span style='color:#bf0303;'>&quot;%f&quot;</span>, &amp;valores[i]);
+    }
+
+    <span style='color:#898887;'>// agora vamos analisar os itens de nossa compra</span>
+    valorTotal = <span style='color:#b08000;'>0</span>;
+    <b>for</b> (i=<span style='color:#b08000;'>0</span>;i&lt;MAX_ITENS;i++)
+    {
+        printf(<span style='color:#bf0303;'>&quot;Estou somando %.2f com %.2f</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, valorTotal, valores[i]);
+        valorTotal = valorTotal + valores[i];
+    }
+
+    maisCaro = <span style='color:#b08000;'>0</span>;
+    <b>for</b> (i=<span style='color:#b08000;'>1</span>;i&lt;MAX_ITENS;i++)
+    {
+        <b>if</b> (valores[i] &gt; valores[maisCaro])
+        {
+            maisCaro = i;
+        }
+    }
+
+    <span style='color:#898887;'>// escrevendo as informações obtidas na tela</span>
+    printf(<span style='color:#bf0303;'>&quot;</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>Informacoes:</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>);
+    printf(<span style='color:#bf0303;'>&quot;O valor do primeiro produto comprado foi: R$ %.2f</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, valores[<span style='color:#b08000;'>0</span>]);
+    printf(<span style='color:#bf0303;'>&quot;O valor do último produto comprado foi: R$ %.2f</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, valores[MAX_ITENS-<span style='color:#b08000;'>1</span>]);
+    printf(<span style='color:#bf0303;'>&quot;A soma dos valores foi: R$ %.2f</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, valorTotal);
+    printf(<span style='color:#bf0303;'>&quot;O item mais caro está na posição %d do vetor.</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, maisCaro);
+    printf(<span style='color:#bf0303;'>&quot;Isso significa que foi o %dº item comprado.</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, maisCaro+<span style='color:#b08000;'>1</span>);
+    printf(<span style='color:#bf0303;'>&quot;O valor do item mais caro foi de: R$ %.2f</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, valores[maisCaro]);
+}</pre>
+</body>
+</html>
