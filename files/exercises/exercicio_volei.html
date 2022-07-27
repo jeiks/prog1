@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="Generator" content="Kate, the KDE Advanced Text Editor" />
+<title>exercicio_volei.c</title>
+</head>
+<!-- Highlighting: "C" -->
+<body>
+<pre style='color:#1f1c1b;background-color:#ffffff;'>
+<span style='color:#898887;'>/*</span>
+<span style='color:#898887;'> * Questão:</span>
+<span style='color:#898887;'> * Em um campeonato Europeu de Volleyball, se inscreveram 30 países.</span>
+<span style='color:#898887;'> * Sabendo-se que na lista oficial de cada país consta, além de outros dados,</span>
+<span style='color:#898887;'> * peso e idade de 12 jogadores, crie um programa que leia e apresente as seguintes informações: </span>
+<span style='color:#898887;'> *  • O peso médio e a idade média de cada um dos times;</span>
+<span style='color:#898887;'> *  • O atleta mais pesado de cada time;</span>
+<span style='color:#898887;'> *  • O atleta mais jovem de cada time;</span>
+<span style='color:#898887;'> *  • O peso médio e a idade média de todos os participantes</span>
+<span style='color:#898887;'> */</span>
+<span style='color:#006e28;'>#include </span><span style='color:#ff5500;'>&lt;stdio.h&gt;</span>
+<span style='color:#006e28;'>#include </span><span style='color:#ff5500;'>&lt;stdlib.h&gt;</span>
+
+<span style='color:#006e28;'>#define NUM_PAISES 2</span>
+<span style='color:#006e28;'>#define NUM_JOG 2</span>
+
+<b>typedef</b> <b>struct</b> {
+    <span style='color:#0057ae;'>float</span> peso;
+    <span style='color:#0057ae;'>int</span> idade;
+} tipoJogador;
+
+<span style='color:#0057ae;'>int</span> main()
+{
+    tipoJogador info[NUM_PAISES][NUM_JOG]; <span style='color:#898887;'>// matriz com Jogadores por País</span>
+    <span style='color:#0057ae;'>int</span> idx_pais, idx_jog; <span style='color:#898887;'>//índice de países e de jogadores</span>
+    <span style='color:#898887;'>// Vou explicar essas de baixo no decorrer do código:</span>
+    <span style='color:#0057ae;'>float</span> peso_medio_time[NUM_PAISES], idade_media_time[NUM_PAISES], mais_pesado_time[NUM_PAISES],
+          peso_medio_geral, idade_media_geral;
+    <span style='color:#0057ae;'>int</span> idx_mais_pesado_time[NUM_PAISES], mais_jovem_time[NUM_PAISES], idx_mais_jovem_time[NUM_PAISES];
+    
+    <span style='color:#898887;'>//gerando os índices para os países com o &quot;for&quot;</span>
+    <b>for</b> (idx_pais=<span style='color:#b08000;'>0</span>;idx_pais&lt;NUM_PAISES;idx_pais++)
+    {
+        printf(<span style='color:#bf0303;'>&quot;Coletando dados do país %d:</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, idx_pais);
+        <span style='color:#898887;'>//gerando os índices para os jogadores com o &quot;for&quot;</span>
+        <b>for</b> (idx_jog=<span style='color:#b08000;'>0</span>;idx_jog&lt;NUM_JOG;idx_jog++)
+        {
+            printf(<span style='color:#bf0303;'>&quot;  Coletando dados do jogador %d:</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, idx_jog);
+            <span style='color:#898887;'>// matriz na posição país: info[idx_pais]</span>
+            <span style='color:#898887;'>// matriz desse país na posição do jogador: info[idx_pais][idx_jog]</span>
+            <span style='color:#898887;'>// acesso a estrutura (struct) desse jogador, posição idade:</span>
+            printf(<span style='color:#bf0303;'>&quot;  Idade: &quot;</span>);
+            scanf(<span style='color:#bf0303;'>&quot;%d&quot;</span>, &amp;info[idx_pais][idx_jog].idade);
+            <span style='color:#898887;'>// acesso a estrutura (struct) desse jogador, posição peso:</span>
+            printf(<span style='color:#bf0303;'>&quot;  Peso: &quot;</span>);
+            scanf(<span style='color:#bf0303;'>&quot;%f&quot;</span>, &amp;info[idx_pais][idx_jog].peso);
+            <span style='color:#898887;'>// Linha em branco pra ficar mais fácil a visualização na tela</span>
+            printf(<span style='color:#bf0303;'>&quot;</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>);
+        }
+    }
+    
+    <span style='color:#898887;'>// Agora que os dados foram coletados, vamos fazer as contas.</span>
+    <span style='color:#898887;'>// vou fazer cada um separado para ficar mais legível, mas pode fazer junto também.</span>
+    
+    <span style='color:#898887;'>// para peso médio e idade média, temos que ver que cada time é um país.</span>
+    <span style='color:#898887;'>// por isso, temos que fazer um vetor com uma posição para cada país:</span>
+    <span style='color:#898887;'>// peso_medio_time[NUM_PAISES], idade_media_time[NUM_PAISES]</span>
+    <span style='color:#898887;'>// Agora, é percorrer pelos jogadores de cada país fazer a soma do peso e da idade</span>
+    <span style='color:#898887;'>// Como deseja-se a média, após somar o peso e a idade, vamos dividir pelo número de jogadores</span>
+    <span style='color:#898887;'>// 1º passo: zerar os acumuladores (é como chamamos as varíaveis que vão acumular somas, produtos, etc. de outras variáveis):</span>
+    <b>for</b> (idx_pais=<span style='color:#b08000;'>0</span>;idx_pais&lt;NUM_PAISES;idx_pais++)
+    {
+        peso_medio_time[idx_pais] = <span style='color:#b08000;'>0.0</span>;
+        idade_media_time[idx_pais] = <span style='color:#b08000;'>0.0</span>;
+    }
+    <span style='color:#898887;'>// 2º passo: somar o peso e a idade de cada jogar para cada país</span>
+    <b>for</b> (idx_pais=<span style='color:#b08000;'>0</span>;idx_pais&lt;NUM_PAISES;idx_pais++)
+    {
+        <span style='color:#898887;'>// Obs.: o conteúdo do 1º passo poderia ter sido feito aqui (nessa linha)</span>
+        <span style='color:#898887;'>//       ao invés de ser feito lá em cima</span>
+        
+        <span style='color:#898887;'>// país da posição &quot;idx_pais&quot;: peso_medio_time[idx_pais] e idade_media_time[idx_pais]</span>
+        <b>for</b> (idx_jog=<span style='color:#b08000;'>0</span>;idx_jog&lt;NUM_JOG;idx_jog++)
+        {
+            <span style='color:#898887;'>// jogador da posição &quot;idx_jog&quot;</span>
+            peso_medio_time[idx_pais] += info[idx_pais][idx_jog].peso;
+            idade_media_time[idx_pais] += info[idx_pais][idx_jog].idade;
+        }
+        <span style='color:#898887;'>// 3º passo: agora que já fiz a soma dos jogadores, vou dividir pela quantidade de jogadores</span>
+        peso_medio_time[idx_pais] = peso_medio_time[idx_pais] / NUM_JOG;
+        idade_media_time[idx_pais] = idade_media_time[idx_pais] / NUM_JOG;
+    }
+    <span style='color:#898887;'>// 3º passo: também poderia ter sido feito aqui fora, em um laço separado para ele:</span>
+    <span style='color:#898887;'>/*for (idx_pais=0;idx_pais&lt;NUM_PAISES;idx_pais++)</span>
+<span style='color:#898887;'>    {</span>
+<span style='color:#898887;'>        peso_medio_time[idx_pais] = peso_medio_time[idx_pais] / NUM_JOG;</span>
+<span style='color:#898887;'>        idade_media_time[idx_pais] = idade_media_time[idx_pais] / NUM_JOG;</span>
+<span style='color:#898887;'>    }*/</span>
+    <span style='color:#898887;'>// 4º passo: imprimir na tela (ou poderia ter feito no último FOR):</span>
+    printf(<span style='color:#bf0303;'>&quot;</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>); <span style='color:#898887;'>//linha em branco pra separar a saída dos demais</span>
+    <b>for</b> (idx_pais=<span style='color:#b08000;'>0</span>;idx_pais&lt;NUM_PAISES;idx_pais++)
+    {
+        printf(<span style='color:#bf0303;'>&quot;Peso  médio do time %d: %.2f</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>,  idx_pais, peso_medio_time[idx_pais]);
+        printf(<span style='color:#bf0303;'>&quot;Idade média do time %d: %.2f</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, idx_pais, idade_media_time[idx_pais]);
+    }
+        
+    <span style='color:#898887;'>// Agora, vamos calcular o atleta mais pesado de cada time em &quot;mais_pesado_time[NUM_PAISES]&quot;</span>
+    <span style='color:#898887;'>// 1º passo: zerar o vetor mais_pesado_time[NUM_PAISES]:</span>
+    <b>for</b> (idx_pais=<span style='color:#b08000;'>0</span>;idx_pais&lt;NUM_PAISES;idx_pais++)
+    {
+        <span style='color:#898887;'>// como eu quero achar o mais pesado, vou &quot;zerar&quot; (termo usado) com -1</span>
+        <span style='color:#898887;'>// pois assim, qualquer peso que eu comparar, mesmo zero, será maior que ele</span>
+        <span style='color:#898887;'>// obs.: a forma mais ágil seria colocar o primeiro atleta de cada time como o mais pesado</span>
+        mais_pesado_time[idx_pais] = -<span style='color:#b08000;'>1.0</span>;
+    }
+    <span style='color:#898887;'>// 2º passo: procurar o mais pesado:</span>
+    <b>for</b> (idx_pais=<span style='color:#b08000;'>0</span>;idx_pais&lt;NUM_PAISES;idx_pais++)
+    {
+        <span style='color:#898887;'>// país da posição &quot;idx_pais&quot;: info[idx_pais], mais_pesado_time[idx_pais] e</span>
+        <span style='color:#898887;'>//                             idx_mais_pesado_time[idx_pais]</span>
+        <b>for</b> (idx_jog=<span style='color:#b08000;'>0</span>;idx_jog&lt;NUM_JOG;idx_jog++)
+        {
+            <span style='color:#898887;'>// jogador da posição &quot;idx_jog&quot;: info[idx_pais][idx_jog]</span>
+            <span style='color:#898887;'>// se o peso do jogador é mais pesado que o peso já armazenado como mais pesado:</span>
+            <b>if</b> (info[idx_pais][idx_jog].peso &gt; mais_pesado_time[idx_pais])
+            {
+                <span style='color:#898887;'>// peso mais pesado é o atual:</span>
+                mais_pesado_time[idx_pais] = info[idx_pais][idx_jog].peso;
+                <span style='color:#898887;'>// índixe do peso mais pesado é atualizado:</span>
+                idx_mais_pesado_time[idx_pais] = idx_jog;
+            }
+        }
+    }
+    <span style='color:#898887;'>// 4º passo: imprimir na tela:</span>
+    printf(<span style='color:#bf0303;'>&quot;</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>); <span style='color:#898887;'>//linha em branco pra separar a saída dos demais</span>
+    <b>for</b> (idx_pais=<span style='color:#b08000;'>0</span>;idx_pais&lt;NUM_PAISES;idx_pais++)
+    {
+        printf(<span style='color:#bf0303;'>&quot;Jogador mais pesado do país %d:</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, idx_pais);
+        printf(<span style='color:#bf0303;'>&quot;  Número do jogador: %d</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, idx_mais_pesado_time[idx_pais]);
+        printf(<span style='color:#bf0303;'>&quot;  Peso: %.2f</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, mais_pesado_time[idx_pais]);
+    }
+    
+    <span style='color:#898887;'>// Agora, vamos procurar o atleta mais jovem de cada time:</span>
+    <span style='color:#898887;'>// 1º passo: zerar o vetor mais_jovem_time[NUM_PAISES]:</span>
+    <b>for</b> (idx_pais=<span style='color:#b08000;'>0</span>;idx_pais&lt;NUM_PAISES;idx_pais++)
+    {
+        <span style='color:#898887;'>// vamos colocar um valor muito alto agora (9999), pois qualquer um vai</span>
+        <span style='color:#898887;'>// ser mais jovem que 999</span>
+        mais_jovem_time[idx_pais] = <span style='color:#b08000;'>999</span>;
+    }
+    <span style='color:#898887;'>// 2º passo: procurar o mais jovem:</span>
+    <b>for</b> (idx_pais=<span style='color:#b08000;'>0</span>;idx_pais&lt;NUM_PAISES;idx_pais++)
+    {
+        <span style='color:#898887;'>// país da posição &quot;idx_pais&quot;: info[idx_pais], mais_jovem_time[idx_pais] e</span>
+        <span style='color:#898887;'>//                             idx_mais_jovem_time[idx_pais]</span>
+        <b>for</b> (idx_jog=<span style='color:#b08000;'>0</span>;idx_jog&lt;NUM_JOG;idx_jog++)
+        {
+            <span style='color:#898887;'>// jogador da posição &quot;idx_jog&quot;: info[idx_pais][idx_jog]</span>
+            <b>if</b> (info[idx_pais][idx_jog].idade &lt; mais_jovem_time[idx_pais])
+            {
+                mais_jovem_time[idx_pais] = info[idx_pais][idx_jog].idade;
+                idx_mais_jovem_time[idx_pais] = idx_jog;
+            }
+        }
+    }
+    <span style='color:#898887;'>// 3º passo: imprimir na tela:</span>
+    printf(<span style='color:#bf0303;'>&quot;</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>); <span style='color:#898887;'>//linha em branco pra separar a saída dos demais</span>
+    <b>for</b> (idx_pais=<span style='color:#b08000;'>0</span>;idx_pais&lt;NUM_PAISES;idx_pais++)
+    {
+        printf(<span style='color:#bf0303;'>&quot;Jogador mais jovem do país %d:</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, idx_pais);
+        printf(<span style='color:#bf0303;'>&quot;  Número do jogador: %d</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, idx_mais_jovem_time[idx_pais]);
+        printf(<span style='color:#bf0303;'>&quot;  Idade: %d</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, mais_jovem_time[idx_pais]);
+    }
+    
+    <span style='color:#898887;'>// Agora, vamos calcular o peso médio e a  idade média de todos os participantes:</span>
+    <span style='color:#898887;'>// 1º passo: zerar as variáveis correspondentes (acumuladores correspondentes):</span>
+    peso_medio_geral = <span style='color:#b08000;'>0.0</span>;
+    idade_media_geral = <span style='color:#b08000;'>0.0</span>;
+    <span style='color:#898887;'>// 2º passo: acumular a soma geral:</span>
+    <b>for</b> (idx_pais=<span style='color:#b08000;'>0</span>;idx_pais&lt;NUM_PAISES;idx_pais++)
+    {
+        <span style='color:#898887;'>// país da posição &quot;idx_pais&quot;: info[idx_pais]</span>
+        <b>for</b> (idx_jog=<span style='color:#b08000;'>0</span>;idx_jog&lt;NUM_JOG;idx_jog++)
+        {
+            <span style='color:#898887;'>// jogador da posição &quot;idx_jog&quot;: info[idx_pais][idx_jog]</span>
+            peso_medio_geral += info[idx_pais][idx_jog].peso;
+            idade_media_geral += info[idx_pais][idx_jog].idade;
+        }
+        <span style='color:#898887;'>// 3º passo: como acabei de percorrer todos os jogadores do time, é hora de</span>
+        <span style='color:#898887;'>//           dividir pelo total de jogadores (NUM_JOG):</span>
+        peso_medio_geral = peso_medio_geral / NUM_JOG;
+        idade_media_geral = idade_media_geral / NUM_JOG;
+    }
+    <span style='color:#898887;'>// 4º passo: imprimir na tela (ou poderia ter sido feito dentro do último FOR)</span>
+    printf(<span style='color:#bf0303;'>&quot;</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>); <span style='color:#898887;'>//linha em branco pra separar a saída dos demais</span>
+    <b>for</b> (idx_pais=<span style='color:#b08000;'>0</span>;idx_pais&lt;NUM_PAISES;idx_pais++)
+    {
+        printf(<span style='color:#bf0303;'>&quot;Peso  médio geral do time %d: %.2f</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>,  idx_pais, peso_medio_geral);
+        printf(<span style='color:#bf0303;'>&quot;Idade média geral do time %d: %.2f</span><span style='color:#3daee9;'>\n</span><span style='color:#bf0303;'>&quot;</span>, idx_pais, idade_media_geral);
+    }
+}
+</pre>
+</body>
+</html>
