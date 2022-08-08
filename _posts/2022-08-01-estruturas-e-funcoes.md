@@ -1,6 +1,6 @@
 ---
 title:  Estruturas, funções e ponteiros
-date:   2022-08-07 18:39:09 -0300
+date:   2022-08-01 18:39:09 -0300
 layout: post
 ---
 

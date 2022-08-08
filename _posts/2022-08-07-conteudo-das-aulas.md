@@ -20,6 +20,6 @@ Para facilitar, sumarizei o conteúdo do site aqui:
 1. [Atividades Avaliativas de Vetores]({{site.baseurl}}{% post_url 2022-07-09-atividades-avaliativas-vetores %})
 1. [Vetores Multidimensionais]({{site.baseurl}}{% post_url 2022-07-15-vetores-multidimensionais %})
 1. [(extra) Exemplo - Exercício vôlei]({{site.baseurl}}{% post_url 2022-07-27-exercicio-volei %})
-1. [Estruturas, funções e ponteiros]({{site.baseurl}}{% post_url 2022-08-07-estruturas-e-funcoes %})
+1. [Estruturas, funções e ponteiros]({{site.baseurl}}{% post_url 2022-08-01-estruturas-e-funcoes %})
 
 Se divirtam! =D
