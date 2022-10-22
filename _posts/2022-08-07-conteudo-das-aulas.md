@@ -21,5 +21,6 @@ Para facilitar, sumarizei o conteúdo do site aqui:
 1. [Vetores Multidimensionais]({{site.baseurl}}{% post_url 2022-07-15-vetores-multidimensionais %})
 1. [(extra) Exemplo - Exercício vôlei]({{site.baseurl}}{% post_url 2022-07-27-exercicio-volei %})
 1. [Estruturas, funções e ponteiros]({{site.baseurl}}{% post_url 2022-08-01-estruturas-e-funcoes %})
+1. [Recursividade]({{site.baseurl}}{% link files/Atividades_Recursividade.pdf %})
 
 Se divirtam! =D
